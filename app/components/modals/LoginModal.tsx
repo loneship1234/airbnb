@@ -34,7 +34,7 @@ const LoginModal = () => {
   });
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
-console.log(data);
+    // console.log(data);
     signIn("credentials", {
       ...data,
       redirect: false,
@@ -77,10 +77,10 @@ console.log(data);
   const footerContent = (
     <div className=" flex flex-col gap-4 mt-3">
       <hr />
-      <Button outline icon={FcGoogle} onClick={() => signIn('google')}>
+      <Button outline icon={FcGoogle} onClick={() => signIn("google")}>
         continue with google
       </Button>{" "}
-      <Button outline icon={AiFillGithub} onClick={() => signIn('github')}>
+      <Button outline icon={AiFillGithub} onClick={() => signIn("github")}>
         continue with github
       </Button>
       <div className="text-neutral-500 text-center mt-4 font-light">

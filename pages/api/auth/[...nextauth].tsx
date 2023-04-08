@@ -19,7 +19,7 @@ export const authOptions: AuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
     }),
     CredentialsProvider({
-      name: "Credentials",
+      name: "credentials",
       credentials: {
         email: { label: "email", type: "text" },
         password: { label: "password", type: "password" },
@@ -36,16 +36,19 @@ export const authOptions: AuthOptions = {
         });
 
         if (!user || !user?.hashedPassword) {
-          throw new Error("Invalid credentials 2");
+          throw new Error("Invalid credentials");
         }
 
-        const isCorrectPassword = await bcrypt.compare(
-          credentials.password,
-          user.hashedPassword
+        const isCorrectPassword = bcrypt.compare(
+          user.hashedPassword,
+          credentials.password
         );
+          // console.log(credentials.password);
+          // console.log(user.hashedPassword);
+          // console.log(isCorrectPassword);
 
         if (!isCorrectPassword) {
-          throw new Error("Invalid credentials 3");
+          throw new Error("Invalid credentials");
         }
 
         return user;

@@ -21,7 +21,7 @@ updatedAt DateTime @updatedAt
 favoriteIds String[] @db.ObjectId
 
 
-accouns Account[]
+accounts Account[]
 listing Listing[]
 reservations Reservation[]
 }
