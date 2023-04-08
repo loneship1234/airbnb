@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e08eb370-aa5a-48fc-aa1d-69b5f82a02c3" name="local3000" url="http://localhost:3000/next">
+        <fileTransfer mountedRoot="C:\Program Files\JetBrains\WebStorm 2023.1\jbr\bin\next" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
